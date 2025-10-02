@@ -1,18 +1,38 @@
 {
-  "name": "cli-labs.github.io",
-  "type": "module",
-  "private": true,
-  "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
-  },
-  "dependencies": {
-    "nuxt": "^4.1.2",
-    "vue": "^3.5.22",
-    "vue-router": "^4.5.1"
-  },
-  "packageManager": "yarn@4.10.3"
+   "name": "cli-labs",
+   "version": "0.0.1",
+   "type": "module",
+   "private": true,
+   "publisher": "Mouli Bheemaneti",
+   "author": "Mouli Bheemaneti",
+   "repository": {
+      "type": "git",
+      "url": "https://github.com/mouli-bheemaneti/cli-labs.github.io"
+   },
+   "engines": {
+      "node": ">=22.20.0"
+   },
+   "scripts": {
+      "build": "nuxt build",
+      "dev": "nuxt dev",
+      "generate": "nuxt generate",
+      "preview": "nuxt preview",
+      "postinstall": "nuxt prepare",
+      "lint": "eslint .",
+      "lint:fix": "eslint . --fix",
+      "up:pkgs": "yarn upgrade-interactive",
+      "up": "yarn up"
+   },
+   "dependencies": {
+      "@nuxt/eslint": "1.9.0",
+      "eslint": "^9.37.0",
+      "nuxt": "^4.1.2",
+      "vue": "^3.5.22",
+      "vue-router": "^4.5.1"
+   },
+   "packageManager": "yarn@4.10.3",
+   "devDependencies": {
+      "sass": "^1.93.2",
+      "typescript": "^5.9.3"
+   }
 }
