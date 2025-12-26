@@ -1,0 +1,1 @@
+import{J as r,a as s,o,y as t}from"./CSJYTgGJ.js";const n={};function a(e,c){return o(),s("tr",null,[t(e.$slots,"default")])}const _=Object.assign(r(n,[["render",a]]),{__name:"ProseTr"});export{_ as default};
