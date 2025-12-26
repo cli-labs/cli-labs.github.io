@@ -55,7 +55,12 @@ $lightness-offsets: (
       $shade-lightness: 100%;
    }
 
-   $color: if($offset ==0%, $base, hsl($h, $s, $shade-lightness));
+   $color: hsl($h, $s, $shade-lightness);
+
+   @if($offset ==0%) {
+      $color: $base;
+   }
+
    $shades: map.merge($shades, ($step: $color));
 }
 

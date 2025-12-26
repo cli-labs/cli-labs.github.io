@@ -28,15 +28,17 @@ export default defineNuxtConfig({
          preprocessorOptions: {
             scss: {
                additionalData: `
-               @use "sass:math";
-               @use "sass:map";
-               @use "sass:meta";
+              @use "sass:math";
+              @use "sass:map";
+              @use "sass:meta";
 
-               @use "@/assets/scss/tokens" as *;
-               @use "@/assets/scss/abstracts" as *;
-               `,
+              @use "@/assets/scss/tokens" as *;
+              @use "@/assets/scss/abstracts" as *;
+              `,
             }
          }
       }
-   }
+   },
+
+   modules: ["@nuxt/content"]
 })

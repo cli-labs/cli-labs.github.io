@@ -1,28 +1,29 @@
 <template>
    <div class="tool-card" @click="openRepositoryUrl">
       <h3 class="tool-card__title">
-         {{ props.title }}
+         {{ tool.title }}
       </h3>
-      <p class="tool-card__description">
-         {{ props.description }}
+      <p v-if="tool.description" class="tool-card__description">
+         {{ tool.description }}
       </p>
       <div class="tool-card__actions" @click="openRepositoryUrl">
-         View Repository
+         Read More
       </div>
    </div>
 </template>
 
 <script lang="ts" setup>
-interface ToolCardProps {
-   title: string;
-   description: string;
-   repositoryUrl: string;
-}
+import type { RepoItem } from '../config/repos';
 
-const props = defineProps<ToolCardProps>();
+const props = defineProps<{ tool: RepoItem }>();
+
+const tool = computed(() => props.tool);
+
+const router = useRouter();
 
 const openRepositoryUrl = () => {
-   window.open(props.repositoryUrl, "_blank");
+   router.push(`/tools/${tool.value.title}`)
+   // window.open(props.repositoryUrl, "_blank");
 };
 </script>
 

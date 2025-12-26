@@ -16,12 +16,11 @@
       <section class="page-home__tools">
          <h2>Stocked Tools</h2>
 
-         List of tools will be added here.
-         <i>Coming soon...</i>
-         <!-- <div class="tools-list">
-            <tool-card v-for="tool in computedTools" :key="tool.id" :title="tool.title" :description="tool.description"
-               :repositoryUrl="tool.repositoryUrl" />
-         </div> -->
+         <!-- List of tools will be added here.
+         <i>Coming soon...</i> -->
+         <div class="tools-list">
+            <tool-card v-for="tool in computedTools" :key="tool.id" :tool="tool" />
+         </div>
       </section>
    </main>
 </template>
